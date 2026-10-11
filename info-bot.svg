@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradInfo" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <!-- Info Border Glow (Slate to Cyan) -->
+    <linearGradient id="borderGradInfo" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.9"/>
+    </linearGradient>
+    <!-- Cyan Beacon Glow -->
+    <filter id="glowInfo" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Base Rounded Container -->
+  <rect x="5" y="5" width="190" height="190" rx="42" fill="url(#bgGradInfo)" stroke="url(#borderGradInfo)" stroke-width="3"/>
+
+  <!-- Subtle Radar Lines -->
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#1e293b" stroke-width="1.5" stroke-dasharray="4 4" />
+  <circle cx="100" cy="100" r="45" fill="none" stroke="#1e293b" stroke-width="1.5" />
+
+  <!-- Pair Logo -->
+  <g transform="translate(35, 87) scale(1.5)" fill="#ffffff">
+    <!-- P -->
+    <path d="M0,19.06v-4.97s11.39-.01,11.39-.01c1.05,0,2.03-.2,2.95-.61,2.15-.96,2.73-3.36,2.11-5.52s-2.77-2.94-4.97-3.02H0S0,0,0,0h12.01c4.88.06,9.64,2.41,10.61,7.42.8,4.16-.61,8.1-4.41,10.11-1.95,1.04-4.07,1.45-6.3,1.51L0,19.06Z"/>
+    <rect x="0" y="20.89" width="6.09" height="4.5" transform="translate(-.02 0) rotate(-.06)"/>
+    <!-- A -->
+    <path d="M41.59,19.97h-11.66s-2.22,5.36-2.22,5.36h-5.93S32.95.28,32.95.28h5.72s11.2,25.04,11.2,25.04l-6.08.02-2.21-5.36ZM39.75,15.56l-3.98-9.59-3.99,9.59h7.97Z"/>
+    <!-- I -->
+    <polygon points="58.31 25.32 52.51 25.34 52.51 .28 58.31 .28 58.31 25.32"/>
+    <!-- R -->
+    <path d="M86.43,25.3l-6.18.05-4.84-6.97h-5.35s0,6.97,0,6.97h-5.8s0-25.05,0-25.05h11.17c2.21.01,4.31.48,6.22,1.5,2.56,1.41,4.15,3.88,4.31,6.79.15,1.8-.15,3.55-1.01,5.14-.92,1.63-2.36,2.82-4.12,3.57l5.59,8.01ZM79.99,8.11c-.28-1.18-1.07-2.08-2.17-2.56-.86-.35-1.75-.53-2.71-.53h-5.04s0,8.72,0,8.72h5.05c.99-.01,1.91-.2,2.79-.58,1.95-.96,2.57-3,2.08-5.05Z"/>
+  </g>
+
+  <!-- Info Cyan Beacon (Top Right) -->
+  <circle cx="160" cy="40" r="12" fill="#06b6d4" opacity="0.35" filter="url(#glowInfo)"/>
+  <circle cx="160" cy="40" r="7" fill="#06b6d4" stroke="#ffffff" stroke-width="1.5"/>
+</svg>
